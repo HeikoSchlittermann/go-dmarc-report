@@ -1,4 +1,4 @@
-module github.com/oliverpool/go-dmarc-report
+module github.com/HeikoSchlittermann/go-dmarc-report
 
 go 1.14
 

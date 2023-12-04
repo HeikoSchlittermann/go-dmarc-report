@@ -5,6 +5,7 @@ import (
 	"encoding/xml"
 	"fmt"
 	"strings"
+	"time"
 )
 
 // Aggregate represents a dmarc aggregate report
@@ -79,6 +80,7 @@ type Record struct {
 	Row         Row         `xml:"row"`
 	Identifiers Identifiers `xml:"identifiers"`
 	AuthResults AuthResults `xml:"auth_results"`
+	Timestamp   time.Time   `xml:"-"`
 }
 
 // Err returns a non-nil error if any of the DMARC policy failed (or is missing)

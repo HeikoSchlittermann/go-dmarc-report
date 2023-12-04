@@ -63,6 +63,7 @@ func TestDecode(t *testing.T) {
 			Scope:  "mfrom",
 		},
 	}, agg.Records[0].AuthResults)
+	a.Equal(time.Unix(1524182400, 0), agg.Records[0].Timestamp) // should have the timestamp from the metadata (begin)
 }
 
 func TestDecodeGzip(t *testing.T) {
